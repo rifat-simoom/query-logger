@@ -24,6 +24,7 @@
     },
     "license": "MIT",
     "name": "rifat-simoom/query-logger",
+    "description": "A framework-agnostic query logger for PHP projects using PDO.",
     "require": {
         "php": ">=7.4",
         "ext-pdo": "*"
