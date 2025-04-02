@@ -14,6 +14,10 @@ class QueryLogger
 
     public function __construct(PDO $pdo, string $logFile = "query.log")
     {
+        gc_collect_cycles();
+        if(file_exists($logFile)) {
+            @unlink($logFile);
+        }
         $this->pdo = $pdo;
         $this->logFile = $logFile;
     }
