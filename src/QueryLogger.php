@@ -9,6 +9,7 @@ use RifatSimoom\QueryLogger\Helpers\Tracer;
 
 class QueryLogger
 {
+    public int $queryCount = 0;
     private PDO $pdo;
     private string $logFile;
 
@@ -33,13 +34,16 @@ class QueryLogger
 
     public function logQuery(string $query, array $params, float $executionTime): void
     {
+        $this->queryCount = $this->queryCount + 1;
+
         $formattedQuery = Formatter::formatQuery($params, $query);
         $logEntry = sprintf(
-            "[%s] %s\nExecution Time: %.5fs\nTrace:\n%s\n\n",
-            date('Y-m-d H:i:s'),
-            $formattedQuery,
-            $executionTime,
-            Tracer::getFilteredTrace()
+            "[%s]\n%d. %s\nExecution Time: %.5fs\nTrace:\n%s\n\n",
+            date('Y-m-d H:i:s'),                      // Date & Time
+            $this->queryCount,                            // Query Number
+            $formattedQuery,                          // Formatted SQL Query
+            $executionTime,                           // Execution Time
+            Tracer::getFilteredTrace()                // Trace
         );
 
         file_put_contents($this->logFile, $logEntry, FILE_APPEND);
