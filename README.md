@@ -50,12 +50,13 @@ By default, the logger saves queries in the specified log file. You can customiz
 
 ## 📄 Example Log Output
 ```
-1. SELECT * FROM users WHERE email = ? [Execution Time: 12ms]
-   Called in /var/www/project/app/Services/UserService.php:45
-
-2. INSERT INTO orders (user_id, total) VALUES (?, ?) [Execution Time: 20ms]
-   Called in /var/www/project/app/Repositories/OrderRepository.php:32
-```
+[2025-04-02 17:14:01]
+1. SELECT * FROM users WHERE email = 'test@example.com'
+Execution Time: 0.00235s
+Trace:
+/var/www/html/repos/query-logger/src/QueryLogger.php:46
+/var/www/html/repos/query-logger/src/LoggedStatement.php:37
+/var/www/html/repos/query-logger/tests/QueryLoggerTest.php:34```
 
 ## 🛠️ Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
