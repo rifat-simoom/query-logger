@@ -57,7 +57,7 @@ Trace:
 /var/www/html/repos/query-logger/src/QueryLogger.php:46
 /var/www/html/repos/query-logger/src/LoggedStatement.php:37
 /var/www/html/repos/query-logger/tests/QueryLoggerTest.php:34```
-
+```
 ## 🛠️ Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
 
