@@ -52,7 +52,7 @@ By default, the logger saves queries in the specified log file. You can customiz
 ```
 [2025-04-02 17:14:01]
 1. SELECT * FROM users WHERE email = 'test@example.com'
-Execution Time: 0.00235s
+Time: 0.00235s
 Trace:
 /var/www/html/repos/query-logger/src/QueryLogger.php:46
 /var/www/html/repos/query-logger/src/LoggedStatement.php:37
