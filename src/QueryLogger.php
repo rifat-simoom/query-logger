@@ -38,7 +38,7 @@ class QueryLogger
 
         $formattedQuery = Formatter::formatQuery($params, $query);
         $logEntry = sprintf(
-            "[%s]\n%d. %s\nExecution Time: %.5fs\nTrace:\n%s\n\n",
+            "[%s]\n%d. %s\nTime: %.5fs\nTrace:\n%s\n\n",
             date('Y-m-d H:i:s'),                      // Date & Time
             $this->queryCount,                            // Query Number
             $formattedQuery,                          // Formatted SQL Query
