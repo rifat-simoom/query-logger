@@ -1,0 +1,36 @@
+{
+    "archive": {
+        "exclude": [
+            "vendor/",
+            "tests/",
+            ".gitignore"
+        ]
+    },
+    "authors": [
+        {
+            "name": "rifat",
+            "email": "rifat.simoom@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "RifatSimoom\\QueryLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\RifatSimoom\\QueryLogger\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "name": "rifat-simoom/query-logger",
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0",
+        "vlucas/phpdotenv": "^3.4"
+    },
+    "type": "library"
+}
