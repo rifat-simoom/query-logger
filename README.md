@@ -65,5 +65,5 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 This project is open-sourced under the MIT License.
 
 ## 📬 Contact
-For issues, please open a GitHub issue or reach out to [your email or GitHub profile].
+For issues, please open a GitHub issue or reach out to rifat.simoom@gmail.com.
 
